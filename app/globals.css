@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --sky: #0086CA;
+  --blue: #0A2240;
+  --brown: #B4853F;
+  --purple: #691C61;
+  --orange: #F6871F;
+  --green: #246f28;
+  --heading: #333333;
+  --text: #454545;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: montRegular;
+  src: url(./_fonts/Montserrat-Medium.ttf);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: montThin;
+  src: url(./_fonts/Montserrat-Light.ttf);
+}
+
+
+body, html {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+  font-family: "montRegular", sans-serif;
+  color: var(--heading);
+}
+
+.thin{
+  font-family: "montThin", sans-serif;
+}
+.regular{
+  font-family: "montRegular", sans-serif;
 }
